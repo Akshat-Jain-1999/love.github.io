@@ -130,24 +130,27 @@
 		</div>
 	</header>
 	<script>
+          var c=0;
 		function fun() {
-
+                        c++;
+                        if(c<=1){
 			var n = document.getElementById('name').value;
 			var ln = document.getElementById('lname').value;
-			if (n == "" || ln == "") {
-				alert("Name can't be empty");
+			if (!isNaN(n) || !isNaN(ln)) {
+				alert("Numbers are not allowed");
 			}
-			else if (n.length < 3 || ln.length < 3) {
-				alert("Name can't be less than 3 alphabets!");
+			else if(n=="" || ln=="")  {
+				alert("Name can't be empty!");
 			}
-			else if (!isNaN(n) || !isNaN(ln)) {
-				alert("Numbers are not allowed!");
+			else if(n.length < 3 || ln.length < 3) {
+				alert("Name can't be less that 3 alphabets!");
 			}
 			else {
 				var a = Math.floor(Math.random() * 100);
 				var inp = document.getElementById('ss').value = a + "%";
 			}
 		}
+         }
 	</script>
 	</div>
 	<script src="https://kit.fontawesome.com/87390cb8ac.js" crossorigin="anonymous"></script>
